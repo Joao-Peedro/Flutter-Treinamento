@@ -24,7 +24,7 @@ class _MyAppState extends State<MyApp> {
     return BlocProvider<ApplicationBloc>(
       create: (context) => _appBloc,
       child: MaterialApp(
-        theme: ThemeData(primaryColor: Colors.black),
+        //   theme: ThemeData(primaryColor: Colors.black),
         title: 'Meu app',
         home: BlocBuilder<ApplicationBloc, ApplicationState>(
           builder: (context, state) {
