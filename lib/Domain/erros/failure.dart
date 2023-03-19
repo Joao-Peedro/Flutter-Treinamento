@@ -3,6 +3,7 @@ abstract class Failure implements Exception {
 }
 
 class ErrorLogin extends Failure {
+  @override
   final String mensagem;
   ErrorLogin({required this.mensagem});
 }

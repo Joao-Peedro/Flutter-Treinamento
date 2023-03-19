@@ -6,16 +6,16 @@ class WidgetHelper {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
         content: Text(
           errorMessage,
-          key: Key('error-snack'),
+          key: const Key('error-snack'),
         ),
-        duration: Duration(seconds: 2),
+        duration: const Duration(seconds: 2),
         backgroundColor: Colors.red,
       ));
     });
   }
 
   static void _onWidgetDidBuild(Function callback) {
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       callback();
     });
   }

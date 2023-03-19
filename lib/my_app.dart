@@ -6,6 +6,8 @@ import 'package:flutter_application_1/Presentation/screens/login_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   State<MyApp> createState() => _MyAppState();
 }
@@ -15,6 +17,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void initState() {
+    super.initState();
     _appBloc = ApplicationBloc(ApplicationState.inicializando());
     _appBloc.add(ApplicationStartEvent(context: context));
   }
@@ -31,7 +34,7 @@ class _MyAppState extends State<MyApp> {
             if (state.isAutenticado) {
               return Container();
             }
-            return LoginScreen();
+            return const LoginScreen();
           },
         ),
       ),
